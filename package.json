@@ -1,0 +1,12 @@
+{
+  "name" : "miniqueue",
+  "description": "A simple in-memory queue for easy sequential processing"
+  "author" : "Hendrik Schnepel",
+  "version" : "0.0.1",
+  "dependencies": {
+  }
+  "repository": { "type": "git",
+                  "url" : "git://github.com/hsch/node-miniqueue.git" },
+  "licenses": [ { "type": "Apache License, Version 2.0",
+                  "url": "http://www.apache.org/licenses/LICENSE-2.0" } ]
+}
