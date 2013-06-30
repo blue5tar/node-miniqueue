@@ -12,7 +12,7 @@ Example
 
     var Queue = require("miniqueue").Queue;
 
-    var numbers = new Queue(function(i, release) {
+    var queues = new Queue(function(i, release) {
       console.info("I'm processing number", i);
       setTimeout(function() { // very long processing
         console.info("Done with number", i);
@@ -20,17 +20,18 @@ Example
       }, 1000);
     });
 
-    numbers.on("empty", function() {
+    queues.on("empty", function() {
       console.info("Queue is empty.");
     });
 
     var i;
-    for (i = 0; i < 3; ++i) {
-      setTimeout(function(i) {
+    for (i = 0; i < 300; ++i) {
         console.info("Adding number", i);
-        numbers.add(i);
-      }.bind(undefined, i), 10);
+        queues.add(i);
     }
+
+    queues.run(5);
+
 
 
 License
